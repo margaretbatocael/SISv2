@@ -17,7 +17,7 @@ class sis(tk.Tk):
         all_frame.rowconfigure(0, weight=1)
         all_frame.columnconfigure(0, weight=1)
         self.frames = {}
-        for F in (Students, Home, Courses):
+        for i in (Students, Home, Courses):
             frame = F(all_frame, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
@@ -458,7 +458,6 @@ class Students(tk.Frame):
         self.SearchBar = Entry(self, font=("Times New Roman", 11), textvariable=SearchBar_Var, bd=0, width=37)
         self.SearchBar.place(x=876,y=110)
 
-        ## Treeview
         
         scrollbar = Scrollbar(self, orient=VERTICAL)
         scrollbar.place(x=1215,y=140,height=390)
